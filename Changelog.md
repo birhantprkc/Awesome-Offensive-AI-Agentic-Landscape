@@ -10,6 +10,28 @@
 
 ## 📅 第 6 周：2026-09-07 ~ 09-13
 
+### 2026-09-11 — 论文章节全量核验：勘误 + 删减 + 经 LLM4Pentest 交叉核对补充 47 篇（73→116）
+对全部 73 篇存量论文逐一通过官方源（arXiv API / ACL Anthology / Crossref / NDSS / USENIX / Springer / IEEE / Elsevier）核验元数据，并与 [simon-p-j-r/LLM4Pentest](https://github.com/simon-p-j-r/LLM4Pentest)（108 篇分类清单）逐篇交叉核对：
+
+**勘误（多项标题 / 作者 / 链接 / 日期错误）**：
+- 🔴 **C12 CyberSecEval 3 链接完全错误**：`arXiv:2408.10627` 实际指向一篇视频分割论文，正确编号为 `2408.01605`（Benchmark 表中的同源错链一并修复）
+- A1 综述标题错误（"From Foundations to Agents4Pentest" → 实际为 *Taxonomy, Co-Evolution, and Open Challenges*），补作者 Zheyuan He et al.
+- A11 MAPTA 实际标题为 *Multi-Agent Penetration Testing AI for the Web*（作者 Isaac David, Arthur Gervais）
+- A22 D-CIPHER 更新为 v2 全称，第一作者实为 Meet Udeshi（NYU，原误记为"NYU LLM CTF Team"）
+- A34 Aurora 更新为 v4 标题（*Towards Automated Cyberattack Emulation with Classical Planning and LLMs*，ACNS 2026）
+- B4 更名为 SAST-Genius；B15 更名为 HonestCyberEval（日期 2024-12→10）；B11 PwnGPT PDF 直链改为 ACL 落地页（日期 2025-04→07）；B17 第一作者实为 Yuxuan Zhu（非 Richard Fang）；A37 日期修正为 2023-07
+- 多篇补齐此前缺失的作者与正式发表渠道（ICLR / TOSEM / TrustCom / ACISP / IRI / UMAP 等）
+
+**删除 4 篇"攻击 AI 系统 / LLM 自身安全"类论文**：
+- `UDora`（劫持 LLM Agent 推理的红队框架）、`AgentPoison`（LLM Agent 记忆投毒后门）、`CyberSecEval 1/3`（LLM 安全编码与风险评测；其基准本体保留于 Benchmark 章节，仅移除论文条目）
+
+**补充 47 篇遗漏论文（按研究任务人工筛选，排除 LLM4Pentest 中的模型安全类条目）**：
+- **A 表 +25**（37→62）：Red-MIRROR、Excalibur、APT-Agent、Pen-Strategist、CHECKMATE、AWE（NDSS'26）、Chimera（NDSS'26）、RefPentester、ARACNE、STRIATUM-CTF、WiFiPenTester、PTFusion、PrivEsc-LLM、LLMs as Hackers（EMSE）、ChainReactor（USENIX'24，AI 规划）、PentestMCP（预印本）等
+- **B 表 +1**（19→20）：FirmAgent（NDSS'26，IoT 固件漏洞发现）
+- **C 表 +21**（17→34）：RangeFactory、CyberForge、ExploitGym、AgentCyberRange、CyberGym-E2E（ICML'26）、HackWorld（ICLR'26）、CTF-Dojo、3CB、Got Root?、CCS/EMNLP 2025 两篇、SoK（ARES）、Forewarned 综述、《软件学报》中文综述等
+
+**同步更新**：论文章节导语与图例（⭐新补充 = 本轮新增）、来源致谢（新增 LLM4Pentest）、顶部导航（73→116）、统计概览与 2026 趋势（新增"靶场与训练数据基建"方向）、时间戳
+
 ### 2026-09-07（19:13）— LLM4Pentest 迁入 Awesome List 章节
 - 主表 #35 `simon-p-j-r/LLM4Pentest`（352 Stars）经核实实为基于《Hackers or Hallucinators?》论文整理的资源合集（105 篇学术论文 + 开源工具 / 博客 / 评测基准链接），并非 Agent 项目，自主表迁出
 - 以 #8 位置插入 Awesome List 资源汇编章节（按 Star 排序：374 → 352 → 44），并标注"自项目主表迁入"
@@ -159,10 +181,10 @@
 
 ## 📊 统计总结 / Summary
 
-- **总提交次数 / Total commits**：19（另有 3 轮本地文档修订：2026-09-02 / 09-07×2）
+- **总提交次数 / Total commits**：19（另有 4 轮本地文档修订：2026-09-02 / 09-07×2 / 09-11）
 - **首次提交 / First commit**：2026-06-11（仓库初始化，仅 LICENSE）
 - **首个内容版本 / First content version**：2026-06-11（`a530c6e`，392 行完整文档）
-- **最新提交 / Latest commit**：2026-07-20；**最新文档修订 / Latest revision**：2026-09-07 19:13
+- **最新提交 / Latest commit**：2026-07-20；**最新文档修订 / Latest revision**：2026-09-11（论文章节全量核验）
 - **核心演进脉络 / Key evolution**：
   1. 06-11：文档框架首发（项目/论文/Benchmark/商业产品四大板块）
   2. 07-13：新增"开源模型"独立章节，论文库首次大扩充
@@ -170,7 +192,8 @@
   4. 07-20：新增"Skill"与"MCP Server"两大生态维度，商业产品表提纯为 Top 20
   5. 09-02：全量 Star 刷新（84 仓库），strix 反超 shannon 登顶，标注归档/迁移/删除条目
   6. 09-07：主表精简（移除 9 个偏离主线项目，56→47）+ LLM4Pentest 迁入 Awesome List
+  7. 09-11：论文章节全量核验（勘误多项错链/标题/作者 + 移除 4 篇 LLM 自身安全类 + 交叉补充 47 篇，73→116）
 
 ---
 
-*本日志基于逐一读取 GitHub 仓库各 commit 的 diff 内容分析整理（而非直接使用 commit message）；2026-08 后的本地文档修订轮次依据修订记录整理。数据采集时点：2026-09-10。*
+*本日志基于逐一读取 GitHub 仓库各 commit 的 diff 内容分析整理（而非直接使用 commit message）；2026-08 后的本地文档修订轮次依据修订记录整理。数据采集时点：2026-09-11。*
