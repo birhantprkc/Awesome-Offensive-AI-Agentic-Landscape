@@ -6,7 +6,7 @@
 
 | [🛠️ Projects](#开源agent列表) | [🧬 Models](#进攻型--安全专用开源模型) | [🧩 Skills](#进攻型-ai-skill-资源精选) | [🔌 MCP](#进攻型-ai-mcp-server-精选) | [📑 Papers](#相关学术论文) | [🧪 Benchmarks](#agent-能力评测-benchmark) | [📚 Awesome Lists](#awesome-list-资源汇编) | [💼 Commercial](#商业化解决方案) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **56** | **11** | **3** | **7** | **73** | **13** | **9** | **32** |
+| **46** | **11** | **3** | **7** | **73** | **13** | **9** | **32** |
 | 渗透 / 红队 / CTF Agent | 进攻 6 + 安全专用 5 | Claude/Agent Skill | Burp/Metasploit/工具链 | 2023 → 2026 | 2023 → 2026 | 资源索引 | 国外 Top 20 + 国内 12 |
 
 </div>
@@ -15,7 +15,7 @@
 >
 > *This document focuses on **offensive AI** — curating open-source projects, **offensive & security-specialized open-weight models**, **offensive AI Skills & MCP Servers**, academic papers, capability benchmarks, and commercial solutions (international & China) in **AI-driven penetration testing & autonomous red-team agents**. It helps researchers, security engineers, and enterprise decision-makers quickly form a holistic view of the domain. Note: the primary lens is "using AI to attack", not "attacking AI systems" (LLM security topics such as prompt injection / jailbreaking are out of scope for the main thread, though a few related projects may appear incidentally).
 >
-> 数据采集时点：2026-07-20（13:13 新增"腾讯云智能渗透黑客松"，赛事章节升级为"知名 AI 攻防 / 智能渗透赛事"）｜ Star 数 ≥ 1000 统一以 `k` 为单位（保留一位小数）。
+> 数据采集时点：2026-09-07（19:13 LLM4Pentest 自主表迁入 Awesome List 章节，主表 47→46）｜ Star 数 ≥ 1000 统一以 `k` 为单位（保留一位小数）。
 
 ---
 
@@ -28,65 +28,55 @@
 
 | # | 项目 | Stars | 语言 | 类型 | 简介 |
 |---|------|-------|------|------|------|
-| 1 | [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon) | 45.6k | TypeScript | 渗透 Agent | 面向 Web 应用和 API 的自主白盒 AI 渗透测试工具 |
-| 2 | [usestrix/strix](https://github.com/usestrix/strix) | 41.0k | Python | 渗透 Agent | 开源 AI 黑客，发现并修复应用漏洞 |
-| 3 | [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo) | 23.2k | TypeScript | LLM 红队 | LLM 应用红队/渗透/漏洞扫描，OpenAI、Anthropic 在用 |
-| 4 | [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | 20.3k | Go | 渗透 Agent | 全自主 AI 代理系统，执行复杂渗透测试任务 |
-| 5 | [GreyDGL/PentestGPT](https://github.com/GreyDGL/PentestGPT) | 14.2k | Python | 渗透 Agent | LLM 驱动的自动化渗透测试代理框架（早期标杆） |
-| 6 | [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | 10.3k | Python | MCP / 渗透 | MCP 服务器，让 AI Agent 自主运行 150+ 安全工具 |
-| 7 | [aliasrobotics/cai](https://github.com/aliasrobotics/cai) | 9.4k | Python | 安全 AI 框架 | Cybersecurity AI（CAI）安全框架 |
-| 8 | [NVIDIA/garak](https://github.com/NVIDIA/garak) | 8.4k | Python | LLM 红队 | LLM 漏洞扫描器（"LLM 界的 nmap"） |
-| 9 | [OWASP/Nettacker](https://github.com/OWASP/Nettacker) | 5.2k | Python | 自动化扫描 | OWASP 自动化渗透测试 / 漏扫框架 |
-| 10 | [Ed1s0nZ/CyberStrikeAI](https://github.com/Ed1s0nZ/CyberStrikeAI) | 5.1k | Go | 渗透 Agent | Go 构建的 AI 原生安全测试平台 |
-| 11 | [elder-plinius/T3MP3ST](https://github.com/elder-plinius/T3MP3ST) | 4.6k | TypeScript | 红队 Agent | 自主红队平台 / 多智能体进攻性安全元框架，复用本机 AI 编码代理（Claude Code/Codex/Ollama 等）作零日漏洞猎手 |
-| 12 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | 4.1k | Python | LLM 红队 | 生成式 AI 风险识别工具（Microsoft） |
-| 13 | [GH05TCREW/pentestagent](https://github.com/GH05TCREW/pentestagent) | 2.8k | Python | 渗透 Agent | 黑盒安全测试 AI Agent 框架（GHOSTCREW） |
-| 14 | [protectai/vulnhuntr](https://github.com/protectai/vulnhuntr) | 2.7k | Python | 漏洞挖掘 | LLM 零样本漏洞发现，"首个 AI 自主发现 0day" |
-| 15 | [samugit83/redamon](https://github.com/samugit83/redamon) | 2.2k | Python | 红队 Agent | AI 驱动的代理式红队框架 |
-| 16 | [confident-ai/deepteam](https://github.com/confident-ai/deepteam) | 2.1k | Python | LLM 红队 | DeepTeam — LLM 红队测试框架 |
-| 17 | [Armur-Ai/Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI) <small>*⭐新补充*</small> | 2.1k | Go | 渗透 Agent | 首个"蜂群"架构自主渗透平台，信息素黑板去中心化协作，ReAct 推理 + 5 种蜂群剧本，支持 Claude API / Ollama 本地，含 MCP 服务器 |
-| 18 | [0xSteph/pentest-ai-agents](https://github.com/0xSteph/pentest-ai-agents) | 2.0k | Shell | Claude SubAgent | 将 Claude Code 转为攻击性安全研究助手 |
-| 19 | [oritera/Cairn](https://github.com/oritera/Cairn) | 2.0k | Python | 渗透 Agent | 通用状态空间搜索引擎，自主渗透 |
-| 20 | [msoedov/agentic_security](https://github.com/msoedov/agentic_security) | 1.9k | Python | LLM 红队 | Agentic LLM 漏洞扫描器 |
-| 21 | [zakirkun/guardian-cli](https://github.com/zakirkun/guardian-cli) | 1.7k | Python | 渗透 Agent | 生产级 AI 渗透 CLI（Gemini + LangChain） |
-| 22 | [trailofbits/buttercup](https://github.com/trailofbits/buttercup) | 1.6k | Python | 漏洞修复 | Trail of Bits 出品（也是 AIxCC 第二名 CRS） |
-| 23 | [Gowtham-Darkseid/AutoPentestX](https://github.com/Gowtham-Darkseid/AutoPentestX) | 1.4k | Python | 渗透 Agent | 自动化渗透测试与漏洞报告 |
-| 24 | [0xSteph/pentest-ai](https://github.com/0xSteph/pentest-ai) <small>*⭐新补充*</small> | 1.3k | Python | 渗透 Agent | MCP 服务器封装 205+ 安全工具 + 17 个专业代理 + 确定性漏洞验证（零误报），CLI + MCP 双路径，自带 LLM |
-| 25 | [utkusen/promptmap](https://github.com/utkusen/promptmap) | 1.2k | Python | LLM 红队 | LLM Prompt Injection 自动化扫描器 |
-| 26 | [CyberStrikeus/CyberStrike](https://github.com/CyberStrikeus/CyberStrike) <small>*⭐新补充*</small> | 1.2k | TypeScript | 渗透 Agent | AI 驱动的进攻性安全代理，7,300+ 安全技能，基于 MITRE ATT&CK / CIS / OWASP / NIST，含网站 [cyberstrike.io](https://cyberstrike.io) |
-| 27 | [ipa-lab/hackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT) | 1.2k | Python | 渗透 Agent | 50 行代码内调用 LLM 协助伦理黑客 |
-| 28 | [bugbasesecurity/pentest-copilot](https://github.com/bugbasesecurity/pentest-copilot) | 1.1k | JavaScript | 浏览器助手 | 浏览器端的道德黑客辅助工具 |
-| 29 | [berylliumsec/nebula](https://github.com/berylliumsec/nebula) | 1.1k | Python | 渗透助手 | AI 渗透助手，自动侦察 / 笔记 / 漏洞分析 |
-| 30 | [SanMuzZzZz/LuaN1aoAgent](https://github.com/SanMuzZzZz/LuaN1aoAgent) | 1.1k | Python | 渗透 Agent | 全自主 AI 渗透 Agent，XBOW >90%（广州大学）|
-| 31 | [splx-ai/agentic-radar](https://github.com/splx-ai/agentic-radar) | 998 | Python | Agent 安全扫描 | LLM Agentic 工作流安全扫描器（OpenAI Agents、CrewAI、LangGraph 等）|
-| 32 | [ghostsecurity/reaper](https://github.com/ghostsecurity/reaper) | 875 | Go | 测试代理 | Ghost Security 出品的实时验证代理工具，对人 / Agent 双友好 |
-| 33 | [PentesterFlow/agent](https://github.com/PentesterFlow/agent) <small>*⭐新补充*</small> | 863 | TypeScript | 渗透 Agent | 终端内 Agentic 进攻性安全，"人在回路中"，内置 OWASP Top 10 技能 + Burp 集成 + 覆盖率跟踪 |
-| 34 | [xalgord/xalgorix](https://github.com/xalgord/xalgorix) | 732 | Go | 渗透 Agent | 开源 AI 渗透测试 Agent |
-| 35 | [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon) <small>*⭐新补充*</small> | 728 | Python | 渗透 Agent | AI 驱动的自主渗透测试引擎，覆盖 Web/云/AD/K8s，多智能体编排 + 隐私网关 + 50+ 工具集成 |
-| 36 | [verialabs/ctf-agent](https://github.com/verialabs/ctf-agent) | 613 | Python | CTF Agent | 自主 CTF solver，BSidesSF 2026 第一名 |
-| 37 | [westonbrown/Cyber-AutoAgent](https://github.com/westonbrown/Cyber-AutoAgent) | 534 | TypeScript | 渗透 Agent | XBOW 验证基准 85%，已归档但代表性强 |
-| 38 | [crond-jaist/AutoPentest-DRL](https://github.com/crond-jaist/AutoPentest-DRL) | 438 | Python | 强化学习渗透 | 使用深度强化学习的自动化渗透测试 |
-| 39 | [0ca/BoxPwnr](https://github.com/0ca/BoxPwnr) | 428 | Python | 渗透 Agent / 多平台基准 | HackTheBox / TryHackMe / picoCTF / Cybench / XBOW 等 15 个平台基准框架 |
-| 40 | [ARCANGEL0/EVA](https://github.com/ARCANGEL0/EVA) | 424 | Python | 渗透 Agent | AI 辅助渗透测试代理，多后端 AI 集成 |
-| 41 | [m-sec-org/BreachWeave](https://github.com/m-sec-org/BreachWeave) | 419 | TypeScript | 渗透 Agent | Manager/Observer/Solver 多角色架构 |
-| 42 | [SHAdd0WTAka/Zen-Ai-Pentest](https://github.com/SHAdd0WTAka/Zen-Ai-Pentest) | 413 | Python | 渗透 Agent | 多代理 AI 渗透框架 + 合规报告 |
-| 43 | [transilienceai/communitytools](https://github.com/transilienceai/communitytools) | 407 | Python | Claude 工具集 | 开源 Claude Code skills/agents/slash command |
-| 44 | [aielte-research/HackSynth](https://github.com/aielte-research/HackSynth) | 309 | Python | 渗透 Agent | Planner + Summarizer 双模块，PicoCTF / OverTheWire 200 题（arXiv:2412.01778）|
-| 45 | [simon-p-j-r/LLM4Pentest](https://github.com/simon-p-j-r/LLM4Pentest) | 297 | - | 研究项目 | LLM4Pentest 研究代码 |
-| 46 | [xoxruns/deadend-cli](https://github.com/xoxruns/deadend-cli) | 265 | Python | 渗透 Agent | XBOW 黑盒 81%，约 $122 API 成本，本地化执行 |
-| 47 | [yz9yt/BugTrace-AI](https://github.com/yz9yt/BugTrace-AI) | 251 | TypeScript | 漏洞追踪 | （已归档，演进为 BugTraceAI v2） |
-| 48 | [GitHubSecurityLab/seclab-taskflow-agent](https://github.com/GitHubSecurityLab/seclab-taskflow-agent) | 212 | Python | Agent 框架 | GitHub Security Lab 出品，YAML 驱动多 Agent + CodeQL |
-| 49 | [KHenryAegis/VulnBot](https://github.com/KHenryAegis/VulnBot) | 177 | Python | 渗透 Agent | 多代理协作框架的自主渗透测试 |
-| 50 | [chainreactors/tinyctfer](https://github.com/chainreactors/tinyctfer) | 173 | Python | CTF Agent | antix 微型意图运行时 + 元工具设计 |
-| 51 | [NYU-LLM-CTF/nyuctf_agents](https://github.com/NYU-LLM-CTF/nyuctf_agents) | 151 | Python | CTF Agent | NYU CTF Bench 配套的 D-CIPHER + Baseline |
-| 52 | [antoninoLorenzo/AI-OPS](https://github.com/antoninoLorenzo/AI-OPS) | 143 | Python | 渗透助手 | 基于开源 LLM 的渗透测试 AI 助手 |
-| 53 | [andreashappe/cochise](https://github.com/andreashappe/cochise) | 126 | Python | AD 渗透 Agent | 自主 Assumed Breach AD 渗透（TOSEM 2025）|
-| 54 | [arthurgervais/mapta](https://github.com/arthurgervais/mapta) | 102 | Python | 渗透 Agent | 多 Agent Web 应用安全评估 + 端到端漏洞利用验证（arXiv:2508.20816）|
-| 55 | [vikramrajkumarmajji/AI-VAPT](https://github.com/vikramrajkumarmajji/AI-VAPT) | 100 | TypeScript | VAPT 框架 | 自主 AI 漏洞评估与渗透测试框架 |
-| 56 | [amazon-science/Cyber-Zero](https://github.com/amazon-science/Cyber-Zero) | 99 | Python | 训练框架 | 无运行时训练网络安全代理（Amazon Science） |
+| 1 | [usestrix/strix](https://github.com/usestrix/strix) | 60.1k | Python | 渗透 Agent | 开源 AI 黑客，发现并修复应用漏洞（🚀 一个多月 Star 从 41k 飙升至 60k，反超 shannon 登顶） |
+| 2 | [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon) | 47.6k | TypeScript | 渗透 Agent | 面向 Web 应用和 API 的自主白盒 AI 渗透测试工具 |
+| 3 | [vxcontrol/pentagi](https://github.com/vxcontrol/pentagi) | 22.2k | Go | 渗透 Agent | 全自主 AI 代理系统，执行复杂渗透测试任务 |
+| 4 | [GreyDGL/PentestGPT](https://github.com/GreyDGL/PentestGPT) | 15.2k | Python | 渗透 Agent | LLM 驱动的自动化渗透测试代理框架（早期标杆） |
+| 5 | [0x4m4/hexstrike-ai](https://github.com/0x4m4/hexstrike-ai) | 11.5k | Python | MCP / 渗透 | MCP 服务器，让 AI Agent 自主运行 150+ 安全工具 |
+| 6 | [aliasrobotics/cai](https://github.com/aliasrobotics/cai) | 9.8k | Python | 安全 AI 框架 | Cybersecurity AI（CAI）安全框架（已于 2026-08-28 归档，曾产出 18 篇论文、30+ CVE） |
+| 7 | [Ed1s0nZ/CyberStrikeAI](https://github.com/Ed1s0nZ/CyberStrikeAI) | 6.3k | Go | 渗透 Agent | Go 构建的 AI 原生安全测试平台 |
+| 8 | [elder-plinius/T3MP3ST](https://github.com/elder-plinius/T3MP3ST) | 5.9k | TypeScript | 红队 Agent | 自主红队平台 / 多智能体进攻性安全元框架，复用本机 AI 编码代理（Claude Code/Codex/Ollama 等）作零日漏洞猎手 |
+| 9 | [OWASP/Nettacker](https://github.com/OWASP/Nettacker) | 5.5k | Python | 自动化扫描 | OWASP 自动化渗透测试 / 漏扫框架 |
+| 10 | [GH05TCREW/pentestagent](https://github.com/GH05TCREW/pentestagent) | 3.0k | Python | 渗透 Agent | 黑盒安全测试 AI Agent 框架（GHOSTCREW） |
+| 11 | [oritera/Cairn](https://github.com/oritera/Cairn) | 2.5k | Python | 渗透 Agent | 通用状态空间搜索引擎，自主渗透 |
+| 12 | [samugit83/redamon](https://github.com/samugit83/redamon) | 2.4k | Python | 红队 Agent | AI 驱动的代理式红队框架 |
+| 13 | [Armur-Ai/Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI) <small>*⭐新补充*</small> | 2.4k | Go | 渗透 Agent | 首个"蜂群"架构自主渗透平台，信息素黑板去中心化协作，ReAct 推理 + 5 种蜂群剧本，支持 Claude API / Ollama 本地，含 MCP 服务器 |
+| 14 | [0xSteph/pentest-ai-agents](https://github.com/0xSteph/pentest-ai-agents) | 2.2k | Shell | Claude SubAgent | 将 Claude Code 转为攻击性安全研究助手 |
+| 15 | [CyberStrikeus/CyberStrike](https://github.com/CyberStrikeus/CyberStrike) <small>*⭐新补充*</small> | 2.2k | TypeScript | 渗透 Agent | AI 驱动的进攻性安全代理，7,300+ 安全技能，基于 MITRE ATT&CK / CIS / OWASP / NIST，含网站 [cyberstrike.io](https://cyberstrike.io) |
+| 16 | [zakirkun/guardian-cli](https://github.com/zakirkun/guardian-cli) | 1.9k | Python | 渗透 Agent | 生产级 AI 渗透 CLI（Gemini + LangChain） |
+| 17 | [0xSteph/pentest-ai](https://github.com/0xSteph/pentest-ai) <small>*⭐新补充*</small> | 1.6k | Python | 渗透 Agent | MCP 服务器封装 205+ 安全工具 + 17 个专业代理 + 确定性漏洞验证（零误报），CLI + MCP 双路径，自带 LLM |
+| 18 | [Gowtham-Darkseid/AutoPentestX](https://github.com/Gowtham-Darkseid/AutoPentestX) | 1.5k | Python | 渗透 Agent | 自动化渗透测试与漏洞报告 |
+| 19 | [bugbasesecurity/pentest-copilot](https://github.com/bugbasesecurity/pentest-copilot) | 1.3k | JavaScript | 浏览器助手 | 浏览器端的道德黑客辅助工具 |
+| 20 | [SanMuzZzZz/LuaN1aoAgent](https://github.com/SanMuzZzZz/LuaN1aoAgent) | 1.3k | Python | 渗透 Agent | 全自主 AI 渗透 Agent，XBOW >90%（广州大学）|
+| 21 | [PentesterFlow/agent](https://github.com/PentesterFlow/agent) <small>*⭐新补充*</small> | 1.3k | TypeScript | 渗透 Agent | 终端内 Agentic 进攻性安全，"人在回路中"，内置 OWASP Top 10 技能 + Burp 集成 + 覆盖率跟踪 |
+| 22 | [ipa-lab/hackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT) | 1.2k | Python | 渗透 Agent | 50 行代码内调用 LLM 协助伦理黑客 |
+| 23 | [berylliumsec/nebula](https://github.com/berylliumsec/nebula) | 1.1k | Python | 渗透助手 | AI 渗透助手，自动侦察 / 笔记 / 漏洞分析 |
+| 24 | [splx-ai/agentic-radar](https://github.com/splx-ai/agentic-radar) | 1.0k | Python | Agent 安全扫描 | LLM Agentic 工作流安全扫描器（OpenAI Agents、CrewAI、LangGraph 等）|
+| 25 | [xalgord/xalgorix](https://github.com/xalgord/xalgorix) | 953 | Go | 渗透 Agent | 开源 AI 渗透测试 Agent |
+| 26 | [ASCIT31/Dark-Moon](https://github.com/ASCIT31/Dark-Moon) <small>*⭐新补充*</small> | 887 | Python | 渗透 Agent | AI 驱动的自主渗透测试引擎，覆盖 Web/云/AD/K8s，多智能体编排 + 隐私网关 + 50+ 工具集成 |
+| 27 | [verialabs/ctf-agent](https://github.com/verialabs/ctf-agent) | 757 | Python | CTF Agent | 自主 CTF solver，BSidesSF 2026 第一名 |
+| 28 | [westonbrown/Cyber-AutoAgent](https://github.com/westonbrown/Cyber-AutoAgent) | 544 | TypeScript | 渗透 Agent | XBOW 验证基准 85%，已归档但代表性强 |
+| 29 | [ARCANGEL0/EVA](https://github.com/ARCANGEL0/EVA) | 526 | Python | 渗透 Agent | AI 辅助渗透测试代理，多后端 AI 集成 |
+| 30 | [m-sec-org/BreachWeave](https://github.com/m-sec-org/BreachWeave) | 525 | TypeScript | 渗透 Agent | Manager/Observer/Solver 多角色架构（腾讯云黑客松第二期线下决赛一等奖，排名 1/613）|
+| 31 | [transilienceai/communitytools](https://github.com/transilienceai/communitytools) | 502 | Python | Claude 工具集 | 开源 Claude Code skills/agents/slash command |
+| 32 | [0ca/BoxPwnr](https://github.com/0ca/BoxPwnr) | 450 | Python | 渗透 Agent / 多平台基准 | HackTheBox / TryHackMe / picoCTF / Cybench / XBOW 等 15 个平台基准框架 |
+| 33 | [crond-jaist/AutoPentest-DRL](https://github.com/crond-jaist/AutoPentest-DRL) | 448 | Python | 强化学习渗透 | 使用深度强化学习的自动化渗透测试 |
+| 34 | [SHAdd0WTAka/Zen-Ai-Pentest](https://github.com/SHAdd0WTAka/Zen-Ai-Pentest) | 446 | Python | 渗透 Agent | 多代理 AI 渗透框架 + 合规报告 |
+| 35 | [aielte-research/HackSynth](https://github.com/aielte-research/HackSynth) | 316 | Python | 渗透 Agent | Planner + Summarizer 双模块，PicoCTF / OverTheWire 200 题（arXiv:2412.01778）|
+| 36 | [straylabs-ai/deadend-cli](https://github.com/straylabs-ai/deadend-cli)（原 xoxruns） | 302 | Python | 渗透 Agent | XBOW 黑盒 81%，约 $122 API 成本，本地化执行 |
+| 37 | [yz9yt/BugTrace-AI](https://github.com/yz9yt/BugTrace-AI) | 253 | TypeScript | 漏洞追踪 | （已归档，演进为 BugTraceAI v2） |
+| 38 | [GitHubSecurityLab/seclab-taskflow-agent](https://github.com/GitHubSecurityLab/seclab-taskflow-agent) | 230 | Python | Agent 框架 | GitHub Security Lab 出品，YAML 驱动多 Agent + CodeQL |
+| 39 | [KHenryAegis/VulnBot](https://github.com/KHenryAegis/VulnBot) | 191 | Python | 渗透 Agent | 多代理协作框架的自主渗透测试 |
+| 40 | [chainreactors/tinyctfer](https://github.com/chainreactors/tinyctfer) | 174 | Python | CTF Agent | antix 微型意图运行时 + 元工具设计（腾讯云黑客松第 4 名核心代码）|
+| 41 | [NYU-LLM-CTF/nyuctf_agents](https://github.com/NYU-LLM-CTF/nyuctf_agents) | 161 | Python | CTF Agent | NYU CTF Bench 配套的 D-CIPHER + Baseline |
+| 42 | [antoninoLorenzo/AI-OPS](https://github.com/antoninoLorenzo/AI-OPS) | 158 | Python | 渗透助手 | 基于开源 LLM 的渗透测试 AI 助手 |
+| 43 | [andreashappe/cochise](https://github.com/andreashappe/cochise) | 134 | Python | AD 渗透 Agent | 自主 Assumed Breach AD 渗透（TOSEM 2025）|
+| 44 | [arthurgervais/mapta](https://github.com/arthurgervais/mapta) | 106 | Python | 渗透 Agent | 多 Agent Web 应用安全评估 + 端到端漏洞利用验证（arXiv:2508.20816）|
+| 45 | [vikramrajkumarmajji/AI-VAPT](https://github.com/vikramrajkumarmajji/AI-VAPT) | 102 | TypeScript | VAPT 框架 | 自主 AI 漏洞评估与渗透测试框架 |
+| 46 | [amazon-science/Cyber-Zero](https://github.com/amazon-science/Cyber-Zero) | 101 | Python | 训练框架 | 无运行时训练网络安全代理（Amazon Science，已于 2026-07-10 归档） |
 
-> 备注：1k–10k 区间的 Star 数为 GitHub 网页缩写值的换算结果；万级以上误差更大。
-> *Note: stars in the 1k–10k range are converted from GitHub's abbreviated values; 10k+ may carry larger errors.*
+> 备注：1k–10k 区间的 Star 数为 GitHub 网页缩写值的换算结果；万级以上误差更大。2026-09-02 全量刷新要点：**strix 反超 shannon 登顶**（41k→60.1k）；**cai**（2026-08-28）与 **Cyber-Zero**（2026-07-10）已归档；**deadend-cli** 迁移至 straylabs-ai 组织；**mcp-shodan** 迁移至 w0h1v。2026-09-07 精简：移除 promptfoo、garak、PyRIT、vulnhuntr、deepteam、agentic_security、buttercup、promptmap、reaper 共 9 个项目（56→47，聚焦渗透 / 红队 / CTF Agent 主线）。
+> *Note: stars in the 1k–10k range are converted from GitHub's abbreviated values; 10k+ may carry larger errors. 2026-09-02 refresh highlights: strix overtakes shannon as #1 (41k→60.1k); cai & Cyber-Zero archived; deadend-cli moved to straylabs-ai; mcp-shodan moved to w0h1v. 2026-09-07 pruning: removed 9 entries (promptfoo, garak, PyRIT, vulnhuntr, deepteam, agentic_security, buttercup, promptmap, reaper), refocusing on pentest / red-team / CTF agents.*
 
 ---
 
@@ -138,9 +128,9 @@
 
 | # | 仓库 | Stars | 载体 / 生态 | 定位与特色 |
 |---|------|-------|-----------|-----------|
-| 1 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) <small>*⭐新补充*</small> | 26.1k | Agent Skills（agentskills.io 标准，20+ 平台兼容） | 🔥 **全球最大开源网安 Agent Skill 库**，817 个结构化技能覆盖 29 大安全域（红队/渗透/云安全/取证/威胁狩猎等），业界唯一六框架映射（ATT&CK/NIST CSF/ATLAS/D3FEND/AI RMF/F3），社区非官方项目 |
-| 2 | [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) | 2.8k | Agent Skills（Claude Code 等） | CTF 全领域技能包，覆盖 Web/Pwn/密码学/逆向/取证/OSINT/恶意软件/AI-ML 等 10 大类，内置 `solve-challenge` 总调度器自动分发题型 |
-| 3 | [Eyadkelleh/awesome-skills-security](https://github.com/Eyadkelleh/awesome-skills-security) | 337 | Agent Skills（60+ Agent 兼容） | 基于 SecLists 精选打包为 7 类技能（Fuzzing/密码字典/敏感模式/Payload/用户名/Webshell/LLM 测试），一键安装 |
+| 1 | [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) <small>*⭐新补充*</small> | 32.0k | Agent Skills（agentskills.io 标准，20+ 平台兼容） | 🔥 **全球最大开源网安 Agent Skill 库**，817 个结构化技能覆盖 29 大安全域（红队/渗透/云安全/取证/威胁狩猎等），业界唯一六框架映射（ATT&CK/NIST CSF/ATLAS/D3FEND/AI RMF/F3），社区非官方项目 |
+| 2 | [ljagiello/ctf-skills](https://github.com/ljagiello/ctf-skills) | 3.2k | Agent Skills（Claude Code 等） | CTF 全领域技能包，覆盖 Web/Pwn/密码学/逆向/取证/OSINT/恶意软件/AI-ML 等 10 大类，内置 `solve-challenge` 总调度器自动分发题型 |
+| 3 | [Eyadkelleh/awesome-skills-security](https://github.com/Eyadkelleh/awesome-skills-security) | 374 | Agent Skills（60+ Agent 兼容） | 基于 SecLists 精选打包为 7 类技能（Fuzzing/密码字典/敏感模式/Payload/用户名/Webshell/LLM 测试），一键安装 |
 
 > ⚠️ 上述 Skill 本身通常**不内置攻击性代码**，仅提供方法论、脚本编排与工具调用规范；实际执行仍依赖用户自行安装的安全工具，且必须严格限定于授权测试场景。
 > *These skills mostly provide methodology/orchestration rather than embedded exploit code; actual execution still relies on separately installed security tools and must remain within authorized testing scope.*
@@ -155,13 +145,13 @@
 
 | # | 仓库 | Stars | 语言 | 定位与特色 |
 |---|------|-------|------|-----------|
-| 1 | [PortSwigger/mcp-server](https://github.com/portswigger/mcp-server) | 990 | Kotlin | **PortSwigger 官方**出品，Burp Suite 扩展，桥接 Burp 与 MCP 客户端（Claude Desktop 等），SSE + Stdio 双模式 |
-| 2 | [Wh0am123/MCP-Kali-Server](https://github.com/Wh0am123/MCP-Kali-Server) <small>*⭐新补充*</small> | 775 | Python | **已收录 Kali 官方软件源**（`apt install mcp-kali-server`）的轻量级 API 桥接，集成 nmap/hydra/sqlmap/metasploit/wpscan 等，支持 AI 辅助渗透与 CTF/HTB/THM 靶场解题 |
-| 3 | [FuzzingLabs/mcp-security-hub](https://github.com/FuzzingLabs/mcp-security-hub) | 742 | Python | 38 个容器化 MCP 服务器集合，覆盖侦察/Web/二进制分析/区块链/云/模糊测试/AD 等，共 300+ 安全工具，生产级安全加固 |
-| 4 | [GH05TCREW/MetasploitMCP](https://github.com/GH05TCREW/MetasploitMCP) | 696 | Python | Metasploit 框架 MCP 桥接，支持 exploit/payload 生成、会话管理、Handler 监听器全流程操作 |
-| 5 | [MorDavid/BloodHound-MCP-AI](https://github.com/MorDavid/BloodHound-MCP-AI) <small>*⭐新补充*</small> | 369 | Python | 首个 **BloodHound AI 集成**，75+ 工具将 Cypher 查询封装为自然语言，专攻 AD 攻击路径分析（Kerberoasting/AS-REP Roasting/NTLM 中继/委派滥用）|
-| 6 | [BurtTheCoder/mcp-shodan](https://github.com/BurtTheCoder/mcp-shodan) <small>*⭐新补充*</small> | 145 | TypeScript | Shodan API + CVEDB 查询 MCP，IP 侦察/DNS 操作/联网设备发现/CVE-CPE 关联查询，支持 Claude Code、Codex、Gemini CLI |
-| 7 | [DMontgomery40/pentest-mcp](https://github.com/DMontgomery40/pentest-mcp) | 139 | JavaScript/TS | 面向专业渗透测试者的实战级 MCP 服务器，内置 nmap/hydra/sqlmap/nuclei/hashcat 等，含 SoW 授权范围采集与 Prompt Injection 风险缓解 |
+| 1 | [PortSwigger/mcp-server](https://github.com/portswigger/mcp-server) | 1.1k | Kotlin | **PortSwigger 官方**出品，Burp Suite 扩展，桥接 Burp 与 MCP 客户端（Claude Desktop 等），SSE + Stdio 双模式 |
+| 2 | [Wh0am123/MCP-Kali-Server](https://github.com/Wh0am123/MCP-Kali-Server) <small>*⭐新补充*</small> | 808 | Python | **已收录 Kali 官方软件源**（`apt install mcp-kali-server`）的轻量级 API 桥接，集成 nmap/hydra/sqlmap/metasploit/wpscan 等，支持 AI 辅助渗透与 CTF/HTB/THM 靶场解题 |
+| 3 | [FuzzingLabs/mcp-security-hub](https://github.com/FuzzingLabs/mcp-security-hub) | 776 | Python | 38 个容器化 MCP 服务器集合，覆盖侦察/Web/二进制分析/区块链/云/模糊测试/AD 等，共 300+ 安全工具，生产级安全加固 |
+| 4 | [GH05TCREW/MetasploitMCP](https://github.com/GH05TCREW/MetasploitMCP) | 722 | Python | Metasploit 框架 MCP 桥接，支持 exploit/payload 生成、会话管理、Handler 监听器全流程操作 |
+| 5 | [MorDavid/BloodHound-MCP-AI](https://github.com/MorDavid/BloodHound-MCP-AI) <small>*⭐新补充*</small> | 375 | Python | 首个 **BloodHound AI 集成**，75+ 工具将 Cypher 查询封装为自然语言，专攻 AD 攻击路径分析（Kerberoasting/AS-REP Roasting/NTLM 中继/委派滥用）|
+| 6 | [w0h1v/mcp-shodan](https://github.com/w0h1v/mcp-shodan)（原 BurtTheCoder） <small>*⭐新补充*</small> | 161 | TypeScript | Shodan API + CVEDB 查询 MCP，IP 侦察/DNS 操作/联网设备发现/CVE-CPE 关联查询，支持 Claude Code、Codex、Gemini CLI |
+| 7 | [DMontgomery40/pentest-mcp](https://github.com/DMontgomery40/pentest-mcp) | 143 | JavaScript/TS | 面向专业渗透测试者的实战级 MCP 服务器，内置 nmap/hydra/sqlmap/nuclei/hashcat 等，含 SoW 授权范围采集与 Prompt Injection 风险缓解 |
 
 > ⚠️ 此类 MCP Server 通常直接封装真实攻击性工具（Metasploit、sqlmap、hashcat 等），风险等级高于 Skill 类资源，**必须部署于隔离环境并严格限定授权范围**。
 > *These MCP servers wrap real offensive tools directly and carry higher risk than skill-based resources — deploy only in isolated, explicitly authorized environments.*
@@ -182,11 +172,11 @@
 
 | 排名 | 队伍 | CRS 系统 | Stars | 仓库 |
 |:----:|------|---------|:-----:|------|
-| 🥇 1 | Team Atlanta | **ATLANTIS** | 613 | [Team-Atlanta/aixcc-afc-atlantis](https://github.com/Team-Atlanta/aixcc-afc-atlantis) |
-| 🥈 2 | Trail of Bits | **Buttercup** | 1.6k | [trailofbits/buttercup](https://github.com/trailofbits/buttercup) |
+| 🥇 1 | Team Atlanta | **ATLANTIS** | 642 | [Team-Atlanta/aixcc-afc-atlantis](https://github.com/Team-Atlanta/aixcc-afc-atlantis) |
+| 🥈 2 | Trail of Bits | **Buttercup** | 1.7k | [trailofbits/buttercup](https://github.com/trailofbits/buttercup) |
 | 🥉 3 | Theori | **RoboDuck** | — | [theori-io/aixcc-afc-archive](https://github.com/theori-io/aixcc-afc-archive) |
 | 4 | All You Need Is A Fuzzing Brain | **FuzzingBrain** | — | [o2lab/afc-crs-all-you-need-is-a-fuzzing-brain](https://github.com/o2lab/afc-crs-all-you-need-is-a-fuzzing-brain) |
-| 5 | Shellphish | **ARTIPHISHELL** | 137 | [shellphish/artiphishell](https://github.com/shellphish/artiphishell) |
+| 5 | Shellphish | **ARTIPHISHELL** | 141 | [shellphish/artiphishell](https://github.com/shellphish/artiphishell) |
 | 6 | 42-b3yond-6ug | **BugBuster** | — | [42-b3yond-6ug/42-b3yond-6ug-crs](https://github.com/42-b3yond-6ug/42-b3yond-6ug-crs) |
 | 7 | Lacrosse (SIFT) | **Lacrosse CRS** | — | [siftech/afc-crs-lacrosse](https://github.com/siftech/afc-crs-lacrosse) |
 
@@ -306,7 +296,7 @@
 | C16 | 2023-12 | [Purple Llama CyberSecEval: A Secure Coding Benchmark for Language Models](https://arxiv.org/abs/2312.04724) | Meta Purple Llama Team | arXiv | [meta-llama/PurpleLlama](https://github.com/meta-llama/PurpleLlama) v1 |
 | C17 | 2023-06 | [InterCode: Standardizing and Benchmarking Interactive Coding with Execution Feedback](https://arxiv.org/abs/2306.14898) | John Yang et al. (Princeton NLP) | NeurIPS 2023 D&B | [princeton-nlp/intercode](https://github.com/princeton-nlp/intercode) |
 
-> 注：会议/期刊年份为论文实际收录会议届期；arXiv 时间为 v1 提交月份。来源致谢：[tmylla/Awesome-LLM4Cybersecurity](https://github.com/tmylla/Awesome-LLM4Cybersecurity)、[EvanThomasLuke/Awesome-AI-Hacking-Agents](https://github.com/EvanThomasLuke/Awesome-AI-Hacking-Agents)、[ox01024/awesome-offensive-security-ai](https://github.com/ox01024/awesome-offensive-security-ai)。
+> 注：会议/期刊年份为论文实际收录会议届期；arXiv 时间为 v1 提交月份。来源致谢：[tmylla/Awesome-LLM4Cybersecurity](https://github.com/tmylla/Awesome-LLM4Cybersecurity)、[EvanThomasLuke/Awesome-AI-Hacking-Agents](https://github.com/EvanThomasLuke/Awesome-AI-Hacking-Agents)。
 > *Note: conference years refer to actual proceedings; arXiv dates are v1. Credits to the three awesome lists above.*
 
 ---
@@ -320,14 +310,14 @@
 | # | Benchmark | 仓库 | Stars | 时间 | 任务规模 | 评测重点 | 关联论文 |
 |---|-----------|------|-------|------|---------|---------|---------|
 | 1 | **TSecBench** <small>*⭐新补充*</small> | [tsecbench.zc.tencent.com](https://tsecbench.zc.tencent.com/) | — | 2026-07 | 从腾讯云黑客松诞生，采用闭卷模式，结果更准确 | 🔥 **腾讯安全云鼎实验室**出品，智能攻防 AI Agent 统一跑分基准，覆盖 Web/二进制漏洞挖掘、漏洞利用、多阶段渗透、云攻击、对抗规避 6 大维度，支持 3 种 Agent 接入方式 | — |
-| 2 | **CyberSecEval (1/2/3/4)** | [meta-llama/PurpleLlama](https://github.com/meta-llama/PurpleLlama) | 4.2k | 2023-12 | 跨多类任务（不安全代码 / Prompt Injection / 攻击辅助 / AutoPatchBench 等） | Meta 出品，覆盖 LLM "防/攻"两端 | [arXiv:2312.04724](https://arxiv.org/abs/2312.04724) / [arXiv:2408.10627](https://arxiv.org/abs/2408.10627) |
-| 3 | **XBOW Validation Benchmarks** | [xbow-engineering/validation-benchmarks](https://github.com/xbow-engineering/validation-benchmarks) | 611 | 2025-06 | 104 道 Web 漏洞挑战（Jeopardy CTF） | XBOW（首个登顶 HackerOne 的 AI）出品，覆盖真实渗透 / 赏金漏洞 | XBOW Engineering Blog |
-| 4 | **CyberGym** | [sunblaze-ucb/cybergym](https://github.com/sunblaze-ucb/cybergym) | 375 | 2025-06 | 真实世界漏洞分析任务（240GB 数据集） | UC Berkeley 出品，强调 real-world，配 4 个示例 Agent | [arXiv:2506.02548](https://arxiv.org/abs/2506.02548)（ICLR 2026）|
-| 5 | **Cybench** | [andyzorigin/cybench](https://github.com/andyzorigin/cybench) | 256 | 2024-08 | 40 道专业级 CTF 任务（17 个子任务） | Stanford CRFM，支持 Unguided / Subtask 双模式 | [arXiv:2408.08926](https://arxiv.org/abs/2408.08926)（ICLR 2025）|
-| 6 | **InterCode-CTF** | [princeton-nlp/intercode](https://github.com/princeton-nlp/intercode) | 248 | 2023-06 | 100 道 picoCTF 题 | Bash/SQL/Python/CTF 交互式代码 Agent 评测 | [arXiv:2306.14898](https://arxiv.org/abs/2306.14898)（NeurIPS 2023 D&B）|
-| 7 | **NYU CTF Bench** | [NYU-LLM-CTF/NYU_CTF_Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | 153 | 2024-06 | 200 题正式 + 55 题开发集，6 大类 | CSAW CTF 历年题目 + Docker 化部署 | [arXiv:2406.05590](https://arxiv.org/abs/2406.05590)（NeurIPS 2024 D&B）|
-| 8 | **AutoPenBench** | [lucagioacchini/auto-pen-bench](https://github.com/lucagioacchini/auto-pen-bench) | 86 | 2024-10 | 33 个任务（22 In-Vitro + 11 真实 CVE） | 生成式 Agent 渗透测试通用评测 | [arXiv:2410.03225](https://arxiv.org/abs/2410.03225)（EMNLP Industry 2025）|
-| 9 | **inspect_cyber** | [UKGovernmentBEIS/inspect_cyber](https://github.com/UKGovernmentBEIS/inspect_cyber) | 29 | 2025-06 | 通用扩展（任务可插拔） | UK AI Security Institute 官方 Agentic Cyber 评估扩展 | — |
+| 2 | **CyberSecEval (1/2/3/4)** | [meta-llama/PurpleLlama](https://github.com/meta-llama/PurpleLlama) | 4.4k | 2023-12 | 跨多类任务（不安全代码 / Prompt Injection / 攻击辅助 / AutoPatchBench 等） | Meta 出品，覆盖 LLM "防/攻"两端 | [arXiv:2312.04724](https://arxiv.org/abs/2312.04724) / [arXiv:2408.10627](https://arxiv.org/abs/2408.10627) |
+| 3 | **CyberGym** | [sunblaze-ucb/cybergym](https://github.com/sunblaze-ucb/cybergym) | 784 | 2025-06 | 真实世界漏洞分析任务（240GB 数据集） | UC Berkeley 出品，强调 real-world，配 4 个示例 Agent（Star 一个多月翻倍，375→784） | [arXiv:2506.02548](https://arxiv.org/abs/2506.02548)（ICLR 2026）|
+| 4 | **XBOW Validation Benchmarks** | [xbow-engineering/validation-benchmarks](https://github.com/xbow-engineering/validation-benchmarks) | 694 | 2025-06 | 104 道 Web 漏洞挑战（Jeopardy CTF） | XBOW（首个登顶 HackerOne 的 AI）出品；⚠️ 已被主流模型刷至约 100% 饱和，仓库转为历史保留 | XBOW Engineering Blog |
+| 5 | **Cybench** | [andyzorigin/cybench](https://github.com/andyzorigin/cybench) | 317 | 2024-08 | 40 道专业级 CTF 任务（17 个子任务） | Stanford CRFM，支持 Unguided / Subtask 双模式 | [arXiv:2408.08926](https://arxiv.org/abs/2408.08926)（ICLR 2025）|
+| 6 | **InterCode-CTF** | [princeton-nlp/intercode](https://github.com/princeton-nlp/intercode) | 255 | 2023-06 | 100 道 picoCTF 题 | Bash/SQL/Python/CTF 交互式代码 Agent 评测 | [arXiv:2306.14898](https://arxiv.org/abs/2306.14898)（NeurIPS 2023 D&B）|
+| 7 | **NYU CTF Bench** | [NYU-LLM-CTF/NYU_CTF_Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | 171 | 2024-06 | 200 题正式 + 55 题开发集，6 大类 | CSAW CTF 历年题目 + Docker 化部署 | [arXiv:2406.05590](https://arxiv.org/abs/2406.05590)（NeurIPS 2024 D&B）|
+| 8 | **AutoPenBench** | [lucagioacchini/auto-pen-bench](https://github.com/lucagioacchini/auto-pen-bench) | 97 | 2024-10 | 33 个任务（22 In-Vitro + 11 真实 CVE） | 生成式 Agent 渗透测试通用评测 | [arXiv:2410.03225](https://arxiv.org/abs/2410.03225)（EMNLP Industry 2025）|
+| 9 | **inspect_cyber** | [UKGovernmentBEIS/inspect_cyber](https://github.com/UKGovernmentBEIS/inspect_cyber) | 38 | 2025-06 | 通用扩展（任务可插拔） | UK AI Security Institute 官方 Agentic Cyber 评估扩展 | — |
 | 10 | **CVE-Bench** | [uiuc-kang-lab/cve-bench](https://github.com/uiuc-kang-lab/cve-bench) | — | 2025-03 | 40 个 critical 严重程度 CVE | 首个基于真实 CVE 的 Web 漏洞利用 Agent 评测 | [arXiv:2503.17332](https://arxiv.org/abs/2503.17332)（ICML 2025）|
 | 11 | **BountyBench** | [bountybench/bountybench](https://bountybench.github.io/) | — | 2025-05 | 25 个真实 GitHub 项目 + Bug Bounty | 用美元金额量化攻防影响力 | Stanford CRFM Blog（2025-05）|
 | 12 | **SEC-bench** | [SEC-bench/SEC-bench](https://github.com/SEC-bench/SEC-bench) | — | 2025-06 | 200 个 C/C++ 真实 CVE，PoC + 补丁双任务 | 首个全自动化的真实安全工程评测 | [arXiv:2506.11791](https://arxiv.org/abs/2506.11791)（NeurIPS 2025）|
@@ -368,7 +358,7 @@
 | 6 | **Horizon3.ai** | NodeZero® | [horizon3.ai](https://horizon3.ai/) | 累计融资 **$183.5M**，估值 $660-750M（NEA 领投 $100M Series D） | 自称 "World's Best AI Hacker"，无 Agent 部署，已执行 24 万+ 次自主渗透测试，客户含 NSA 与 4 家财富 10 强 |
 | 7 | **Hadrian** | Hadrian | [hadrian.io](https://hadrian.io/) | 荷兰/伦敦网络安全公司，多轮 Growth 融资（Notion Capital 等机构），Gartner Peer Insights 常客 | 持续攻击面管理 + Agentic AI 自主渗透，覆盖域名/子域名/证书/IP 全资产测绘 |
 | 8 | **RunSybil** | Sybil | [runsybil.com](https://www.runsybil.com/) | 2026-03 完成 **$40M** 融资（Khosla Ventures 领投），创始人为 **OpenAI 首位安全员工** | 自主 Web 应用渗透 AI Agent，强调与人工 pentester 协作 |
-| 9 | **Strix (Usestrix)** | Strix | [usestrix.com](https://usestrix.com/) | 开源版本 GitHub **34k+ Stars**（社区影响力最高），商业化融资已启动 | 开源 + 商业双栈 AI 黑客，动态运行代码找漏洞并用真实 PoC 验证 |
+| 9 | **Strix (Usestrix)** | Strix | [usestrix.com](https://usestrix.com/) | 开源版本 GitHub **60k+ Stars**（社区影响力最高，一个多月激增 19k），商业化融资已启动 | 开源 + 商业双栈 AI 黑客，动态运行代码找漏洞并用真实 PoC 验证 |
 | 10 | **Terra Security** | Terra Portal | [terra.security](https://www.terra.security/) | 2025-09 完成 **$30M Series A**（Felicis Ventures 领投），累计融资 $38M+ | 首个 Agentic AI + Human-in-the-Loop 持续渗透测试平台 |
 | 11 | **CalypsoAI** | Calypso | [calypsoai.com](https://calypsoai.com/) | 累计融资 $40.8M，**估值 $145M**，2018 年成立的老牌厂商，Gartner Cool Vendor | 企业级 GenAI 安全 + 红队评估 |
 | 12 | **Corridor** | Corridor | [corridor.dev](https://corridor.dev/) | 2026-03 完成 **$25M Series A**，创始人 Jack Cable 为美国前 CISA 安全工程师 | AI 生成代码实时安全护栏，源头级漏洞检测 |
@@ -425,27 +415,30 @@
 |---|------|-------|--------|---------|
 | 1 | [fr0gger/Awesome-GPT-Agents](https://github.com/fr0gger/Awesome-GPT-Agents) <small>*⭐新补充*</small> | 6.6k | fr0gger | 网络安全 GPT Agents 全景清单，攻防双方向覆盖 |
 | 2 | [jiep/offensive-ai-compilation](https://github.com/jiep/offensive-ai-compilation) | 1.4k | jiep | 攻击性 AI 综合资源（对抗 ML / 渗透 / 钓鱼 / 生成式 AI 滥用） |
-| 3 | [ottosulin/awesome-ai-security](https://github.com/ottosulin/awesome-ai-security) | 1.0k | ottosulin | 通用 AI 安全资源集合（攻防兼顾） |
-| 4 | [TalEliyahu/Awesome-AI-Security](https://github.com/TalEliyahu/Awesome-AI-Security) | 714 | TalEliyahu | 偏 AI 系统防御侧的资源、研究与工具 |
-| 5 | [raphabot/awesome-cybersecurity-agentic-ai](https://github.com/raphabot/awesome-cybersecurity-agentic-ai) <small>*⭐新补充*</small> | 514 | raphabot | 网络安全 Agentic AI 精选资源（MCP / 工具 / 框架 / 论文 / 社区） |
-| 6 | [Eyadkelleh/awesome-skills-security](https://github.com/Eyadkelleh/awesome-skills-security) <small>*⭐新补充*</small> | 337 | Eyadkelleh | 基于 SecLists 精选打包的 Agent Skill 合集（Fuzzing/密码字典/Payload/Webshell/LLM 测试等），60+ Agent 兼容 |
-| 7 | [EvanThomasLuke/Awesome-AI-Hacking-Agents](https://github.com/EvanThomasLuke/Awesome-AI-Hacking-Agents) | 258 | EvanThomasLuke | AI Hacking Agent 全景 + AIxCC 决赛队伍 + 商业产品 + 论文 |
-| 8 | [ox01024/awesome-offensive-security-ai](https://github.com/ox01024/awesome-offensive-security-ai) | 22 | ox01024 | 偏 Benchmark + 评估 / 竞赛 / 学术资源（含中英双语 README）|
-| 9 | [gmh5225/awesome-ai-security](https://github.com/gmh5225/awesome-ai-security) | 21 | gmh5225 | 面向渗透测试者 / 漏洞猎人 / 安全研究的 AI 安全精选 |
+| 3 | [ottosulin/awesome-ai-security](https://github.com/ottosulin/awesome-ai-security) | 1.4k | ottosulin | 通用 AI 安全资源集合（攻防兼顾） |
+| 4 | [TalEliyahu/Awesome-AI-Security](https://github.com/TalEliyahu/Awesome-AI-Security) | 861 | TalEliyahu | 偏 AI 系统防御侧的资源、研究与工具 |
+| 5 | [EvanThomasLuke/Awesome-AI-Hacking-Agents](https://github.com/EvanThomasLuke/Awesome-AI-Hacking-Agents) | 653 | EvanThomasLuke | AI Hacking Agent 全景 + AIxCC 决赛队伍 + 商业产品 + 论文（一个多月 Star 从 258 涨至 653） |
+| 6 | [raphabot/awesome-cybersecurity-agentic-ai](https://github.com/raphabot/awesome-cybersecurity-agentic-ai) <small>*⭐新补充*</small> | 578 | raphabot | 网络安全 Agentic AI 精选资源（MCP / 工具 / 框架 / 论文 / 社区） |
+| 7 | [Eyadkelleh/awesome-skills-security](https://github.com/Eyadkelleh/awesome-skills-security) <small>*⭐新补充*</small> | 374 | Eyadkelleh | 基于 SecLists 精选打包的 Agent Skill 合集（Fuzzing/密码字典/Payload/Webshell/LLM 测试等），60+ Agent 兼容 |
+| 8 | [simon-p-j-r/LLM4Pentest](https://github.com/simon-p-j-r/LLM4Pentest) | 352 | simon-p-j-r | 基于《Hackers or Hallucinators?》论文整理的 LLM 自动化渗透测试资源合集：105 篇学术论文 + 开源工具 / 博客 / 评测基准（自项目主表迁入） |
+| 9 | [gmh5225/awesome-ai-security](https://github.com/gmh5225/awesome-ai-security) | 44 | gmh5225 | 面向渗透测试者 / 漏洞猎人 / 安全研究的 AI 安全精选 |
+
+> ⚠️ 变动说明（2026-09-02）：原收录的 [ox01024/awesome-offensive-security-ai](https://github.com/ox01024/awesome-offensive-security-ai) 已被作者删除（404），本轮移除；EvanThomasLuke/Awesome-AI-Hacking-Agents 重新排序时反超 raphabot 列表。2026-09-07：[simon-p-j-r/LLM4Pentest](https://github.com/simon-p-j-r/LLM4Pentest)（352 Stars）实为资源合集而非 Agent 项目，自项目主表迁入本节。
+> *Changelog note: ox01024/awesome-offensive-security-ai was deleted by its owner (404) and removed. 2026-09-07: simon-p-j-r/LLM4Pentest (352 stars) is a curated resource collection rather than an agent project, moved here from the main project table.*
 
 ---
 
 ## 📊 统计概览
 *Statistics Overview*
 
-- **项目总数 / Total projects**：63（项目主表 56 个 + AIxCC CRS 系统 7 个）
+- **项目总数 / Total projects**：53（项目主表 46 个 + AIxCC CRS 系统 7 个；2026-09-07 移除 9 个偏离主线的项目，LLM4Pentest 迁入 Awesome List）
 - **进攻型 / 安全专用模型 / Models**：11 个（A. 无对齐进攻型 6 个：Qwythos、WhiteRabbitNeo/DeepHat、Lily-Cybersecurity、BaronLLM、CyberStrike-OffSec-35B、BugTraceAI-CORE-Ultra-27B；B. 安全专用 5 个：VulnLLM-R、Foundation-Sec-8B-Reasoning、CyberSecQwen-4B、Meta-SecAlign、Titus-CybersecurityLLM）
 - **进攻型 AI Skill / Skills**：3 个，均为 Star ≥ 100 的纯 Skill 项目（Anthropic-Cybersecurity-Skills、ctf-skills、awesome-skills-security）
 - **进攻型 AI MCP Server / MCP Servers**：7 个，均为 Star ≥ 100 的安全工具集合类 MCP（PortSwigger mcp-server、MCP-Kali-Server、mcp-security-hub、MetasploitMCP、BloodHound-MCP-AI、mcp-shodan、pentest-mcp）
 - **收录论文 / Papers**：**73** 篇（A. 渗透 & 红队 37 篇 / B. 漏洞挖掘 19 篇 / C. 评测 & 训练 17 篇；覆盖 2023-06 → 2026-07）
 - **收录 Benchmark / Benchmarks**：13 个（覆盖 2023-06 → 2026-07）
 - **商业产品 / Commercial products**：32 个（国外 Top 20，经融资/估值/媒体报道核查精选 + 国内 12）
-- **Awesome List**：9 个
+- **Awesome List**：9 个（2026-09-07 新增 LLM4Pentest 资源合集；此前 ox01024/awesome-offensive-security-ai 已被作者删除并移除）
 - **主要语言 / Languages**：Python ≈ 70%，TypeScript ≈ 12%，Go ≈ 8%，其他 ≈ 10%
 - **领域趋势 / Trends**：
   - **2023**：方向探索（Happe & Cito、PentestGPT、InterCode-CTF）
@@ -453,7 +446,7 @@
   - **2025**：多 Agent 协作 + 训练方法 + 自主 AD 渗透 + 真实 CVE 评测 + AIxCC 决赛 + RL 渗透 + 实证研究（VulnBot、cochise、D-CIPHER、Cyber-Zero、xOffense、CVE-Bench、SEC-bench、CyberGym、ATLANTIS、Buttercup、RapidPen、Pentest-R1、OCCULT、PACEbench）
   - **2026 起**：商业化加速（XBOW、Pentera、Horizon3.ai、Hacktron、MindFort、**Anthropic Mythos** 等纷纷涌现）+ 持续基准化（PentestEval、PenForge、CTFusion）+ 攻防闭环与实战化（ZERO-APT 攻防裁判闭环、FuzzingBrain V2 实战挖 0day、Agents4Pentest 综述成型）
 
-> 🕐 **最后更新时间 / Last updated**：2026-07-20 13:13 (UTC+8)
+> 🕐 **最后更新时间 / Last updated**：2026-09-07 19:13 (UTC+8)
 
 ---
 
