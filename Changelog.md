@@ -3,8 +3,55 @@
 *Offensive AI Agentic Landscape*
 仓库地址 / Repository: [Yeti-791/Awesome-Offensive-AI-Agentic-Landscape](https://github.com/Yeti-791/Awesome-Offensive-AI-Agentic-Landscape)
 
-> 本日志基于对每次 commit 实际 diff 内容的逐一读取与分析整理而成（非提交信息原文翻译），按周（周一至周日）组织，最新一周置于最前。
-> *This changelog is compiled by reading and analyzing the actual diff content of each commit (not a literal translation of commit messages), organized by week (Monday–Sunday), most recent week first.*
+> 本日志基于对每次 commit 实际 diff 内容的逐一读取与分析整理而成（非提交信息原文翻译），按周（周一至周日）组织，最新一周置于最前；未关联 commit 的本地文档修订轮次以日期 + 时间标注。
+> *This changelog is compiled by reading and analyzing the actual diff content of each commit (not a literal translation of commit messages), organized by week (Monday–Sunday), most recent week first; local document-revision rounds without an associated commit are marked by date + time.*
+
+---
+
+## 📅 第 6 周：2026-09-07 ~ 09-13
+
+### 2026-09-07（19:13）— LLM4Pentest 迁入 Awesome List 章节
+- 主表 #35 `simon-p-j-r/LLM4Pentest`（352 Stars）经核实实为基于《Hackers or Hallucinators?》论文整理的资源合集（105 篇学术论文 + 开源工具 / 博客 / 评测基准链接），并非 Agent 项目，自主表迁出
+- 以 #8 位置插入 Awesome List 资源汇编章节（按 Star 排序：374 → 352 → 44），并标注"自项目主表迁入"
+- 计数同步：主表 47→46，Awesome List 8→9，项目总数 54→53（主表 46 + AIxCC CRS 7）
+- 论文表 A3（Hackers or Hallucinators?）中对 LLM4Pentest 的关联链接保留
+
+### 2026-09-07（18:18）— 主表精简：移除 9 个偏离主线的项目（56→47）
+- 删除对象：`promptfoo`、`garak`、`PyRIT`、`vulnhuntr`、`deepteam`、`agentic_security`、`buttercup`、`promptmap`、`reaper`
+- 聚焦"渗透 / 红队 / CTF Agent"主线：其中 6 个为"测 AI 系统"型 LLM 红队工具，与文档"用 AI 做攻击，而非攻击 AI 系统"的定位不符；另移除漏洞挖掘 / 漏洞修复 / 测试代理类条目
+- 主表重新编号 1-47，项目总数 63→54；表格备注与统计概览同步记录精简原因（中英文）
+- `trailofbits/buttercup` 在「DARPA AIxCC 2025」赛事表中保留（独立章节，不算重复）
+
+---
+
+## 📅 第 5 周：2026-08-31 ~ 09-06
+
+### 2026-09-02（19:35）— 全量 Star 刷新（84 个仓库）+ 全表重排序
+距上次数据采集（07-20）一个多月，通过 GitHub API 与仓库网页逐一核查全部 84 个含 Star 数的仓库：
+
+**主表排名重大变化**：
+- 🚀 `usestrix/strix` 41.0k → **60.1k**（激增 19k），反超 `KeygraphHQ/shannon`（45.6k→47.6k）登顶第一
+- `CyberStrikeus/CyberStrike` 1.2k → 2.2k（近乎翻倍，升至 #20）
+- `oritera/Cairn` 2.0k→2.5k、`confident-ai/deepteam` 2.1k→2.6k、`0xSteph/pentest-ai` 1.3k→1.6k
+- `splx-ai/agentic-radar`（998→1.0k）、`PentesterFlow/agent`（863→1.3k）跨过 1k 门槛
+- `xalgord/xalgorix` 732→953、`ASCIT31/Dark-Moon` 728→887（反超 `reaper` 882）、`verialabs/ctf-agent` 613→757
+- `0ca/BoxPwnr`（428→450）与 `crond-jaist/AutoPentest-DRL`（438→448）位次互换
+
+**归档 / 迁移 / 删除标注**：
+- ⚠️ `aliasrobotics/cai` 已于 2026-08-28 归档（表内标注：曾产出 18 篇论文、30+ CVE）
+- ⚠️ `amazon-science/Cyber-Zero` 已于 2026-07-10 归档
+- 🔄 `deadend-cli` 迁移至 `straylabs-ai` 组织（原 xoxruns，链接已更新）
+- 🔄 `mcp-shodan` 迁移至 `w0h1v`（原 BurtTheCoder，链接已更新）
+- ❌ `ox01024/awesome-offensive-security-ai` 已被作者删除（404），Awesome List 章节 9→8，论文致谢中的失效链接同步移除
+
+**其他章节同步刷新**：
+- Skill：`Anthropic-Cybersecurity-Skills` 26.1k→**32.0k**、`ctf-skills` 2.8k→3.2k、`awesome-skills-security` 337→374
+- MCP：`PortSwigger/mcp-server` 990→1.1k、`MCP-Kali-Server` 775→808、`mcp-security-hub` 742→776、`MetasploitMCP` 696→722、`BloodHound-MCP-AI` 369→375、`mcp-shodan` 145→161、`pentest-mcp` 139→143
+- Benchmark：`CyberGym` 375→**784**（翻倍，反超 XBOW 升至第 3）；`XBOW Validation Benchmarks` 611→694 并标注"已被主流模型刷至约 100% 饱和，仓库转为历史保留"；`PurpleLlama` 4.2k→4.4k、`Cybench` 256→317、`InterCode-CTF` 248→255、`NYU CTF Bench` 153→171、`AutoPenBench` 86→97、`inspect_cyber` 29→38
+- AIxCC：`ATLANTIS` 613→642、`Buttercup` 1.6k→1.7k、`ARTIPHISHELL` 137→141
+- Awesome List：`TalEliyahu` 714→861、`EvanThomasLuke/Awesome-AI-Hacking-Agents` 258→**653**（升至第 5）、`raphabot` 514→578、`gmh5225` 21→44
+- 商业表：Strix 行"开源影响力"数据 34k+ → **60k+**
+- 主表备注新增本轮刷新要点说明（中英文），数据采集时点与最后更新时间同步更新
 
 ---
 
@@ -112,16 +159,18 @@
 
 ## 📊 统计总结 / Summary
 
-- **总提交次数 / Total commits**：19
+- **总提交次数 / Total commits**：19（另有 3 轮本地文档修订：2026-09-02 / 09-07×2）
 - **首次提交 / First commit**：2026-06-11（仓库初始化，仅 LICENSE）
 - **首个内容版本 / First content version**：2026-06-11（`a530c6e`，392 行完整文档）
-- **最新提交 / Latest commit**：2026-07-20
+- **最新提交 / Latest commit**：2026-07-20；**最新文档修订 / Latest revision**：2026-09-07 19:13
 - **核心演进脉络 / Key evolution**：
   1. 06-11：文档框架首发（项目/论文/Benchmark/商业产品四大板块）
   2. 07-13：新增"开源模型"独立章节，论文库首次大扩充
   3. 07-14 ~ 07-15：密集迭代（新项目/新模型/新Benchmark/建立社区贡献规范/收紧收录标准）
   4. 07-20：新增"Skill"与"MCP Server"两大生态维度，商业产品表提纯为 Top 20
+  5. 09-02：全量 Star 刷新（84 仓库），strix 反超 shannon 登顶，标注归档/迁移/删除条目
+  6. 09-07：主表精简（移除 9 个偏离主线项目，56→47）+ LLM4Pentest 迁入 Awesome List
 
 ---
 
-*本日志基于逐一读取 GitHub 仓库各 commit 的 diff 内容分析整理，而非直接使用 commit message，数据采集时点：2026-07-20 13:48。*
+*本日志基于逐一读取 GitHub 仓库各 commit 的 diff 内容分析整理（而非直接使用 commit message）；2026-08 后的本地文档修订轮次依据修订记录整理。数据采集时点：2026-09-10。*
