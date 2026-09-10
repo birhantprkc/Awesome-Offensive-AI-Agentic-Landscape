@@ -13,7 +13,7 @@
 
 > 本文档以**进攻型 AI**为主线，系统整理了 **AI 渗透测试 / 自主红队 Agent** 领域的开源项目、**进攻型 & 安全专用开源模型**、**进攻型 AI Skill 与 MCP Server**、学术论文、能力评测 Benchmark 与国内外商业化解决方案，帮助研究者、安全工程师与企业安全决策者快速建立领域全景认知。注意：本文档聚焦"用 AI 做攻击"，而非"攻击 AI 系统"（LLM 自身安全性如 prompt injection / jailbreak 等不在主线范围，仅少量关联项目涉及）。
 >
-> *This document focuses on **offensive AI** — curating open-source projects, **offensive & security-specialized open-weight models**, **offensive AI Skills & MCP Servers**, academic papers, capability benchmarks, and commercial solutions (international & China) in **AI-driven penetration testing & autonomous red-team agents**. It helps researchers, security engineers, and enterprise decision-makers quickly form a holistic view of the domain. Note: the primary lens is "using AI to attack", not "attacking AI systems" (LLM security topics such as prompt injection / jailbreaking are out of scope for the main thread, though a few related projects may appear incidentally).
+> *This document focuses on **offensive AI** — curating open-source projects, **offensive & security-specialized open-weight models**, **offensive AI Skills & MCP Servers**, academic papers, capability benchmarks, and commercial solutions (international & China) in **AI-driven penetration testing & autonomous red-team agents**. It helps researchers, security engineers, and enterprise decision-makers quickly form a holistic view of the domain. Note: the primary lens is "using AI to attack", not "attacking AI systems" (LLM security topics such as prompt injection / jailbreaking are out of scope for the main thread, though a few related projects may appear incidentally).*
 >
 > 数据采集时点：2026-09-07（19:13 LLM4Pentest 自主表迁入 Awesome List 章节，主表 47→46）｜ Star 数 ≥ 1000 统一以 `k` 为单位（保留一位小数）。
 
